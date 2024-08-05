@@ -1,0 +1,16 @@
+.wrapper {
+  padding-top: 20px;
+}
+.form {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+.input {
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+}

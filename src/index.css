@@ -30,3 +30,17 @@ img {
   display: block;
   max-width: 100%;
 }
+
+button {
+  color: white;
+  background-color: #132060;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  &:hover {
+    background-color: #2339aa;
+    transform: scale(1.05);
+  }
+}

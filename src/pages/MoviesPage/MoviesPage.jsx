@@ -61,14 +61,15 @@ const MoviesPage = () => {
   }, [searchValue]);
 
   return (
-    <div>
+    <div className={s.wrapper}>
       <Formik
         validationSchema={validationSchema}
         initialValues={initialValues}
         onSubmit={handleSubmit}
       >
-        <Form>
+        <Form className={s.form}>
           <Field
+            className={s.input}
             name="search"
             placeholder="Search movies"
             type="search"
