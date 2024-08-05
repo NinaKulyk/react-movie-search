@@ -10,12 +10,12 @@ const Navigation = () => {
   return (
     <header className={s.header}>
       <ul className={s.navList}>
-        <li>
+        <li className={s.navItem}>
           <NavLink className={buildLinkClass} to="/">
             Home
           </NavLink>
         </li>
-        <li>
+        <li className={s.navItem}>
           <NavLink className={buildLinkClass} to="/movies">
             Movies
           </NavLink>
