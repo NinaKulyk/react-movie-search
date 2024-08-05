@@ -1,0 +1,33 @@
+.header {
+  width: 100%;
+  padding: 20px;
+  background-color: #0d1540;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navList {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+.link:hover {
+  transform: scale(1.05);
+}
+
+.active {
+  color: rgb(213, 169, 255);
+}
+
+.active:hover {
+  transform: scale(1.05);
+}
