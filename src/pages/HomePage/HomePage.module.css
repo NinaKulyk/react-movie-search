@@ -1,4 +1,8 @@
 .wrapper {
   padding: 20px 0;
-  font-size: 28px;
+}
+
+.title {
+  padding-bottom: 20px;
+  font-size: 36px;
 }

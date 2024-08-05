@@ -22,7 +22,7 @@ const HomePage = () => {
 
   return (
     <div className={s.wrapper}>
-      <h2>Trending today</h2>
+      <h2 className={s.title}>Trending today</h2>
       {isError ? (
         <p>Oops! Something went wrong. Please try again.</p>
       ) : (
