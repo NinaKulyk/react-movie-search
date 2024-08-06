@@ -15,6 +15,9 @@ const MovieDetailsPage = () => {
 
   const BASIC_IMG_URL = "http://image.tmdb.org/t/p/original";
 
+  const DEFAULT_IMG =
+    "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png";
+
   useEffect(() => {
     const getData = async () => {
       try {
@@ -41,7 +44,11 @@ const MovieDetailsPage = () => {
       <div className={s.container}>
         <img
           className={s.movieImg}
-          src={`${BASIC_IMG_URL}${moviesById.backdrop_path}`}
+          src={
+            moviesById.backdrop_path
+              ? `${BASIC_IMG_URL}${moviesById.backdrop_path}`
+              : DEFAULT_IMG
+          }
           alt={moviesById.title}
         />
         <div className={s.wrapper}>

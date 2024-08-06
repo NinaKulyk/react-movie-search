@@ -9,6 +9,9 @@ const MovieCast = () => {
 
   const BASIC_IMG_URL = "http://image.tmdb.org/t/p/original";
 
+  const DEFAULT_IMG =
+    "https://static.vecteezy.com/system/resources/previews/009/292/244/original/default-avatar-icon-of-social-media-user-vector.jpg";
+
   useEffect(() => {
     const getData = async () => {
       try {
@@ -29,8 +32,13 @@ const MovieCast = () => {
           <li key={item.id} className={s.castItem}>
             <img
               className={s.castImg}
-              src={`${BASIC_IMG_URL}${item.profile_path}`}
+              src={
+                item.profile_path
+                  ? `${BASIC_IMG_URL}${item.profile_path}`
+                  : DEFAULT_IMG
+              }
               alt={item.name}
+              height={300}
             />
             <h3 className={s.castTitle}>{item.name}</h3>
             <p className={s.castText}>({item.character})</p>

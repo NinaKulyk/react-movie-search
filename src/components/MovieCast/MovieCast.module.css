@@ -21,6 +21,7 @@
 }
 .castImg {
   border-radius: 8px;
+  object-fit: cover;
 }
 .castTitle {
   font-size: 22px;
