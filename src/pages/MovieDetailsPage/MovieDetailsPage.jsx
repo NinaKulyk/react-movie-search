@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from "react";
 import s from "./MovieDetailsPage.module.css";
-import { useParams } from "react-router-dom";
+import { NavLink, Outlet, useParams } from "react-router-dom";
 import { fetchMoviesById } from "../../API/api";
 import { BounceLoader } from "react-spinners";
+import clsx from "clsx";
+
+const buildLinkClass = ({ isActive }) => {
+  return clsx(s.link, isActive && s.active);
+};
 
 const MovieDetailsPage = () => {
   const params = useParams();
@@ -51,6 +56,19 @@ const MovieDetailsPage = () => {
         <h3 className={s.movieTitles}>Overview</h3>
         <p className={s.description}>{moviesById.overview}</p>
       </div>
+      <ul className={s.navList}>
+        <li className={s.navItem}>
+          <NavLink className={buildLinkClass} to="cast">
+            Cast
+          </NavLink>
+        </li>
+        <li className={s.navItem}>
+          <NavLink className={buildLinkClass} to="reviews">
+            Reviews
+          </NavLink>
+        </li>
+      </ul>
+      <Outlet />
     </div>
   );
 };

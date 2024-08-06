@@ -53,3 +53,28 @@
   align-items: start;
   text-align: left;
 }
+
+.navList {
+  padding-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.navItem {
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.link {
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+.active {
+  color: rgb(213, 169, 255);
+}

@@ -1,7 +1,11 @@
 import React from "react";
 
 const MovieReviews = () => {
-  return <div></div>;
+  return (
+    <div>
+      <h3>Reviews</h3>
+    </div>
+  );
 };
 
 export default MovieReviews;

@@ -1,0 +1,32 @@
+.wrapper {
+  padding: 20px 40px;
+}
+
+.title {
+  padding-bottom: 20px;
+  font-size: 36px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.castItem {
+  border: solid 1px black;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+  align-items: center;
+}
+.castImg {
+  border-radius: 8px;
+}
+.castTitle {
+  font-size: 22px;
+  padding: 10px 0;
+}
+.castText {
+  padding: 0 0 15px;
+  font-size: 18px;
+}
