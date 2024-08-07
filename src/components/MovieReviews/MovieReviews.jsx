@@ -1,9 +1,55 @@
-import React from "react";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { fetchMoviesByIdReviews } from "../../API/api.js";
+import s from "./MovieReviews.module.css";
 
 const MovieReviews = () => {
+  const params = useParams();
+  const [reviews, setReviews] = useState([]);
+
+  const BASIC_IMG_URL = "http://image.tmdb.org/t/p/original";
+
+  const DEFAULT_IMG =
+    "https://static.vecteezy.com/system/resources/previews/009/292/244/original/default-avatar-icon-of-social-media-user-vector.jpg";
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const data = await fetchMoviesByIdReviews(params.movieId);
+        setReviews(data.results);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getData();
+  }, [params.movieId]);
+
   return (
-    <div>
-      <h3>Reviews</h3>
+    <div className={s.container}>
+      <h3 className={s.title}>Reviews</h3>
+      <ul className={s.list}>
+        {reviews.map((item) => (
+          <li className={s.reviewsItem} key={item.id}>
+            <div className={s.wrapper}>
+              <img
+                className={s.userImg}
+                src={
+                  item.author_details.avatar_path
+                    ? `${BASIC_IMG_URL}${item.author_details.avatar_path}`
+                    : DEFAULT_IMG
+                }
+                alt={item.author_details.username}
+                width={100}
+                height={100}
+              />
+              <h3 className={s.username}>{item.author_details.username}</h3>
+            </div>
+            <p className={s.reviewsText}>{item.content}</p>
+            <p className={s.details}>Created: {item.created_at}</p>
+            <p className={s.details}>Updated: {item.updated_at}</p>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

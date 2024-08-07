@@ -16,8 +16,21 @@
 }
 
 .title {
+  color: rgb(213, 169, 255);
   padding-bottom: 20px;
   font-size: 36px;
+}
+
+.goBack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .wrapper {
@@ -77,4 +90,12 @@
 
 .active {
   color: rgb(213, 169, 255);
+}
+
+.loaderWrapper {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }

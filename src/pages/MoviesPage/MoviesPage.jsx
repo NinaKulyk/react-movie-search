@@ -13,7 +13,7 @@ const MoviesPage = () => {
   const [isError, setIsError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  const searchValue = searchParams.get("query") ?? "";
+  const searchValue = searchParams.get("search") ?? "";
 
   const initialValues = {
     search: "",
@@ -26,14 +26,14 @@ const MoviesPage = () => {
   const notify = () => toast.error("You need to enter the value!");
 
   const handleSubmit = (values, actions) => {
-    const searchQuery = values.search.trim();
+    const searchQuery = values.search?.trim();
     if (!searchQuery) {
       notify();
       setMoviesSearch([]);
       setSearchParams({});
       return;
     }
-    searchParams.set("query", searchQuery);
+    searchParams.set("search", searchQuery);
     setSearchParams(searchParams);
     actions.resetForm();
   };

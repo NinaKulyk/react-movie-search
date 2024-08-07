@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useRef, useState, Suspense } from "react";
 import s from "./MovieDetailsPage.module.css";
-import { NavLink, Outlet, useParams } from "react-router-dom";
+import { NavLink, Outlet, useParams, useLocation } from "react-router-dom";
 import { fetchMoviesById } from "../../API/api";
 import { BounceLoader } from "react-spinners";
 import clsx from "clsx";
+import { FaArrowLeft } from "react-icons/fa";
 
 const buildLinkClass = ({ isActive }) => {
   return clsx(s.link, isActive && s.active);
@@ -12,6 +13,8 @@ const buildLinkClass = ({ isActive }) => {
 const MovieDetailsPage = () => {
   const params = useParams();
   const [moviesById, setMoviesById] = useState(null);
+  const location = useLocation();
+  const goBackRef = useRef(location?.state || "/");
 
   const BASIC_IMG_URL = "http://image.tmdb.org/t/p/original";
 
@@ -41,6 +44,12 @@ const MovieDetailsPage = () => {
   return (
     <div className={s.mainContainer}>
       <h2 className={s.title}>Movie Details</h2>
+      <div className={s.goBack}>
+        <FaArrowLeft size={18} />
+        <NavLink className={s.link} to={goBackRef.current}>
+          Go Back
+        </NavLink>
+      </div>
       <div className={s.container}>
         <img
           className={s.movieImg}
@@ -75,7 +84,15 @@ const MovieDetailsPage = () => {
           </NavLink>
         </li>
       </ul>
-      <Outlet />
+      <Suspense
+        fallback={
+          <div className={s.loaderWrapper}>
+            <BounceLoader color="#ffffff" size={100} />
+          </div>
+        }
+      >
+        <Outlet />
+      </Suspense>
     </div>
   );
 };
