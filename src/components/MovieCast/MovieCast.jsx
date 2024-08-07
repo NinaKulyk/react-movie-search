@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchMoviesByIdCredits } from "../../API/api";
 import s from "./MovieCast.module.css";
+import { BounceLoader } from "react-spinners";
 
 const MovieCast = () => {
   const params = useParams();
   const [cast, setCast] = useState([]);
   const [isError, setIsError] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const BASIC_IMG_URL = "http://image.tmdb.org/t/p/original";
 
@@ -16,15 +18,26 @@ const MovieCast = () => {
   useEffect(() => {
     const getData = async () => {
       try {
+        setIsLoading(true);
         setIsError(false);
         const data = await fetchMoviesByIdCredits(params.movieId);
         setCast(data.cast);
       } catch (error) {
         setIsError(true);
+      } finally {
+        setIsLoading(false);
       }
     };
     getData();
   }, [params.movieId]);
+
+  if (isLoading) {
+    return (
+      <div className={s.loader}>
+        <BounceLoader color="#ffffff" size={100} />
+      </div>
+    );
+  }
 
   if (cast.length === 0) {
     return <h3 className={s.error}>Nothing found</h3>;

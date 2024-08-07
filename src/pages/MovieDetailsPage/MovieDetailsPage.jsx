@@ -35,9 +35,7 @@ const MovieDetailsPage = () => {
     getData();
   }, [params.movieId]);
 
-  if (isError) {
-    return <p>Oops! Something went wrong. Please try again.</p>;
-  }
+  if (isError) return <p>Oops! Something went wrong. Please try again.</p>;
 
   if (!moviesById) {
     return (
@@ -92,7 +90,7 @@ const MovieDetailsPage = () => {
       </ul>
       <Suspense
         fallback={
-          <div className={s.loaderWrapper}>
+          <div className={s.loader}>
             <BounceLoader color="#ffffff" size={100} />
           </div>
         }

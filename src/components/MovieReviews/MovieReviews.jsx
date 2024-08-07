@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchMoviesByIdReviews } from "../../API/api.js";
 import s from "./MovieReviews.module.css";
+import { BounceLoader } from "react-spinners";
 
 const MovieReviews = () => {
   const params = useParams();
   const [reviews, setReviews] = useState([]);
   const [isError, setIsError] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const BASIC_IMG_URL = "http://image.tmdb.org/t/p/original";
 
@@ -16,15 +18,26 @@ const MovieReviews = () => {
   useEffect(() => {
     const getData = async () => {
       try {
+        setIsLoading(true);
         setIsError(false);
         const data = await fetchMoviesByIdReviews(params.movieId);
         setReviews(data.results);
       } catch (error) {
         setIsError(true);
+      } finally {
+        setIsLoading(false);
       }
     };
     getData();
   }, [params.movieId]);
+
+  if (isLoading) {
+    return (
+      <div className={s.loader}>
+        <BounceLoader color="#ffffff" size={100} />
+      </div>
+    );
+  }
 
   if (reviews.length === 0) {
     return <h3 className={s.error}>Nothing found</h3>;
