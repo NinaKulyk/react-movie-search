@@ -15,7 +15,7 @@ const MovieDetailsPage = () => {
   const [moviesById, setMoviesById] = useState(null);
   const [isError, setIsError] = useState(false);
   const location = useLocation();
-  const goBackRef = useRef(location?.state || "/");
+  const goBackRef = useRef(location?.state || "/movies");
 
   const BASIC_IMG_URL = "http://image.tmdb.org/t/p/original";
 
