@@ -6,6 +6,7 @@ import s from "./MovieReviews.module.css";
 const MovieReviews = () => {
   const params = useParams();
   const [reviews, setReviews] = useState([]);
+  const [isError, setIsError] = useState(false);
 
   const BASIC_IMG_URL = "http://image.tmdb.org/t/p/original";
 
@@ -15,41 +16,50 @@ const MovieReviews = () => {
   useEffect(() => {
     const getData = async () => {
       try {
+        setIsError(false);
         const data = await fetchMoviesByIdReviews(params.movieId);
         setReviews(data.results);
       } catch (error) {
-        console.log(error);
+        setIsError(true);
       }
     };
     getData();
   }, [params.movieId]);
 
+  if (reviews.length === 0) {
+    return <h3 className={s.error}>Nothing found</h3>;
+  }
+
   return (
     <div className={s.container}>
       <h3 className={s.title}>Reviews</h3>
-      <ul className={s.list}>
-        {reviews.map((item) => (
-          <li className={s.reviewsItem} key={item.id}>
-            <div className={s.wrapper}>
-              <img
-                className={s.userImg}
-                src={
-                  item.author_details.avatar_path
-                    ? `${BASIC_IMG_URL}${item.author_details.avatar_path}`
-                    : DEFAULT_IMG
-                }
-                alt={item.author_details.username}
-                width={100}
-                height={100}
-              />
-              <h3 className={s.username}>{item.author_details.username}</h3>
-            </div>
-            <p className={s.reviewsText}>{item.content}</p>
-            <p className={s.details}>Created: {item.created_at}</p>
-            <p className={s.details}>Updated: {item.updated_at}</p>
-          </li>
-        ))}
-      </ul>
+      {isError ? (
+        <p>Oops! Something went wrong. Please try again.</p>
+      ) : (
+        <ul className={s.list}>
+          {reviews.map((item) => (
+            <li className={s.reviewsItem} key={item.id}>
+              <div className={s.wrapper}>
+                <img
+                  className={s.userImg}
+                  src={
+                    item.author_details.avatar_path
+                      ? `${BASIC_IMG_URL}${item.author_details.avatar_path}`
+                      : DEFAULT_IMG
+                  }
+                  alt={item.author_details.username}
+                  width={100}
+                  height={100}
+                />
+                <h3 className={s.username}>{item.author_details.username}</h3>
+              </div>
+              <p className={s.reviewsText}>{item.content}</p>
+              <p className={s.details}>Created: {item.created_at}</p>
+              <p className={s.details}>Updated: {item.updated_at}</p>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };

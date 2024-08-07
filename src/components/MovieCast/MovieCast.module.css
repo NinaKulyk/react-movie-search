@@ -31,3 +31,8 @@
   padding: 0 5px 15px;
   font-size: 18px;
 }
+
+.error {
+  padding: 20px;
+  font-size: 22px;
+}

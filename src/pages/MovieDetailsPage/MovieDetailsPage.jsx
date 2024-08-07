@@ -13,6 +13,7 @@ const buildLinkClass = ({ isActive }) => {
 const MovieDetailsPage = () => {
   const params = useParams();
   const [moviesById, setMoviesById] = useState(null);
+  const [isError, setIsError] = useState(false);
   const location = useLocation();
   const goBackRef = useRef(location?.state || "/");
 
@@ -24,14 +25,19 @@ const MovieDetailsPage = () => {
   useEffect(() => {
     const getData = async () => {
       try {
+        setIsError(false);
         const data = await fetchMoviesById(params.movieId);
         setMoviesById(data);
       } catch (error) {
-        console.log(error);
+        setIsError(true);
       }
     };
     getData();
   }, [params.movieId]);
+
+  if (isError) {
+    return <p>Oops! Something went wrong. Please try again.</p>;
+  }
 
   if (!moviesById) {
     return (
