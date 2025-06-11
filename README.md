@@ -42,20 +42,20 @@ A responsive movie search app built with React and Vite. It uses The Movie Datab
 
 | Home Page (Mobile) | Home Page (Tablet) |
 |:--:|:--:|
-| ![Mobile](./screenshots/mobile.png) | ![Tablet](./screenshots/tablet.png) |
+| ![Mobile](./screenshots/home-mobile.png) | ![Tablet](./screenshots/home-tablet.png) |
 
-| Home Page (Desktop) | Ultra-wide Display |
+| Home Page (Desktop) | Search Results |
 |:--:|:--:|
-| ![Desktop](./screenshots/desktop.png) | ![UltraWide](./screenshots/ultrawide.png) |
+| ![Desktop](./screenshots/home-desktop.png) | ![Search](./screenshots/search.png) |
 
-| Search Results | Empty Input Validation |
+| Empty Input Validation | Movie Details Page |
 |:--:|:--:|
-| ![Search](./screenshots/search.png) | ![Validation](./screenshots/empty-input.png) |
+| ![Validation](./screenshots/empty-input.png) | ![Details](./screenshots/movie-details.png) |
 
-| Movie Details Page | Cast Section |
+| Cast Section | Reviews Section |
 |:--:|:--:|
-| ![Details](./screenshots/movie-details.png) | ![Cast](./screenshots/cast.png) |
+| ![Cast](./screenshots/cast.png) | ![Reviews](./screenshots/reviews.png) |
 
-| Reviews Section |
+| Ultra-wide Display Example |
 |:--:|
-| ![Reviews](./screenshots/reviews.png) |
+| ![UltraWide](./screenshots/ultrawide.png) |
