@@ -42,11 +42,11 @@ A responsive movie search app built with React and Vite. It uses The Movie Datab
 
 | Home Page (Mobile) | Home Page (Tablet) |
 |:--:|:--:|
-| ![Mobile](./screenshots/home-mobile.png) | ![Tablet](./screenshots/home-tablet.png) |
+| ![Mobile](./screenshots/mobile.png) | ![Tablet](./screenshots/tablet.png) |
 
 | Home Page (Desktop) | Search Results |
 |:--:|:--:|
-| ![Desktop](./screenshots/home-desktop.png) | ![Search](./screenshots/search.png) |
+| ![Desktop](./screenshots/desktop.png) | ![Search](./screenshots/search.png) |
 
 | Empty Input Validation | Movie Details Page |
 |:--:|:--:|
