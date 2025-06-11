@@ -1,8 +1,61 @@
-# React + Vite
+# React Movie Search
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive movie search app built with React and Vite. It uses The Movie Database (TMDb) API to display trending movies, search by title, and view detailed information for each movie.
 
-Currently, two official plugins are available:
+🌐 Deployed on [Vercel](https://goit-react-hw-05-2fbpnv939-nina-kulyks-projects.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## 🛠 Tech Stack
+
+- React
+- React Router
+- Vite
+- Axios
+- React Toastify
+- TMDb API
+
+---
+
+## ✨ Features
+
+- Fully responsive layout: optimized for mobile, tablet, desktop, and even ultra-wide screens (e.g., TVs)
+- Home page displaying trending movies
+- Smooth hover effect on movie posters
+- Search functionality with validation for empty input
+- Detailed movie page with:
+  - Movie overview
+  - "Go back" button
+  - Cast section
+  - Reviews section
+- Toast notification on invalid input
+
+---
+
+## 🚀 Live Demo
+
+🔗 [View Live](https://goit-react-hw-05-2fbpnv939-nina-kulyks-projects.vercel.app/)
+
+---
+
+## 🖼️ Screenshots
+
+| Home Page (Desktop) | Home Page (Tablet) |
+|---------------------|--------------------|
+| ![Home Desktop](./screenshots/desktop.png) | ![Home Tablet](./screenshots/tablet.png) |
+
+| Home Page (Mobile) | Search Results |
+|--------------------|----------------|
+| ![Home Mobile](./screenshots/mobile.png) | ![Search](./screenshots/search.png) |
+
+| Empty Input Validation | Movie Details Page |
+|------------------------|---------------------|
+| ![Empty Input](./screenshots/empty-input.png) | ![Details](./screenshots/movie-details.png) |
+
+| Cast Section | Reviews Section |
+|--------------|------------------|
+| ![Cast](./screenshots/cast.png) | ![Reviews](./screenshots/reviews.png) |
+
+| Ultra-wide Display Example |
+|----------------------------|
+| ![Ultra Wide](./screenshots/ultra-wide.png) |
