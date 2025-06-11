@@ -49,9 +49,9 @@ A responsive movie search app built with React and Vite. It uses The Movie Datab
     <td align="center"><strong>Desktop</strong></td>
   </tr>
   <tr>
-    <td><img src="./screenshots/mobile.jpeg" width="200"/></td>
-    <td><img src="./screenshots/tablet.jpeg" width="300"/></td>
-    <td><img src="./screenshots/desktop.jpeg" width="500"/></td>
+    <td><img src="./screenshots/mobile.png" width="200"/></td>
+    <td><img src="./screenshots/tablet.png" width="300"/></td>
+    <td><img src="./screenshots/desktop.png" width="500"/></td>
   </tr>
 </table>
 
@@ -60,7 +60,7 @@ A responsive movie search app built with React and Vite. It uses The Movie Datab
 ### 🔎 Search Results
 
 <p align="center">
-  <img src="./screenshots/search.jpeg" width="700"/>
+  <img src="./screenshots/search.png" width="700"/>
 </p>
 
 ---
@@ -68,7 +68,7 @@ A responsive movie search app built with React and Vite. It uses The Movie Datab
 ### ❌ Empty Input Validation
 
 <p align="center">
-  <img src="./screenshots/empty-input.jpeg" width="500"/>
+  <img src="./screenshots/empty-input.png" width="500"/>
 </p>
 
 ---
@@ -76,7 +76,7 @@ A responsive movie search app built with React and Vite. It uses The Movie Datab
 ### 🎬 Movie Details Page
 
 <p align="center">
-  <img src="./screenshots/movie-details.jpeg" width="700"/>
+  <img src="./screenshots/movie-details.png" width="700"/>
 </p>
 
 ---
@@ -85,8 +85,8 @@ A responsive movie search app built with React and Vite. It uses The Movie Datab
 
 <table>
   <tr>
-    <td><img src="./screenshots/cast.jpeg" width="350"/></td>
-    <td><img src="./screenshots/reviews.jpeg" width="350"/></td>
+    <td><img src="./screenshots/cast.png" width="350"/></td>
+    <td><img src="./screenshots/reviews.png" width="350"/></td>
   </tr>
 </table>
 
@@ -95,5 +95,5 @@ A responsive movie search app built with React and Vite. It uses The Movie Datab
 ### 🖥️ Ultra-wide Display Example
 
 <p align="center">
-  <img src="./screenshots/ultra-wide.jpeg" width="900"/>
+  <img src="./screenshots/ultra-wide.png" width="900"/>
 </p>
