@@ -38,56 +38,42 @@ A responsive movie search app built with React and Vite. It uses The Movie Datab
 
 ---
 
-## 📷 Screenshots
+## 📸 Screenshots
 
 ### 🏠 Home Page
 
-<p align="center">
-  <img src="./screenshots/mobile.png" alt="Home Mobile" width="160"/>
-  <img src="./screenshots/tablet.png" alt="Home Tablet" width="230"/>
-</p>
-
-<p align="center">
-  <img src="./screenshots/desktop.png" alt="Home Desktop" width="600"/>
-</p>
+| Mobile | Tablet | Desktop |
+|--------|--------|---------|
+| <img src="./screenshots/mobile.png" width="200"/> | <img src="./screenshots/tablet.png" width="250"/> | <img src="./screenshots/desktop.png" width="350"/> |
 
 ---
 
 ### 🔍 Search Results
 
-<p align="center">
-  <img src="./screenshots/search.png" alt="Search Results" width="600"/>
-</p>
+<img src="./screenshots/search.png" width="700"/>
 
 ---
 
 ### ❌ Empty Input Validation
 
-<p align="center">
-  <img src="./screenshots/empty-input.png" alt="Empty Input Validation" width="500"/>
-</p>
+<img src="./screenshots/empty-input.png" width="600"/>
 
 ---
 
-### 🎬 Movie Details Page
+### 📄 Movie Details Page
 
-<p align="center">
-  <img src="./screenshots/movie-details.png" alt="Movie Details" width="600"/>
-</p>
+<img src="./screenshots/movie-details.png" width="700"/>
 
 ---
 
-### 👥 Cast Section & 💬 Reviews Section
+### 🎭 Cast Section & 💬 Reviews Section
 
-<p align="center">
-  <img src="./screenshots/cast.png" alt="Cast Section" width="300"/>
-  <img src="./screenshots/reviews.png" alt="Reviews Section" width="300"/>
-</p>
+| Cast | Reviews |
+|------|---------|
+| <img src="./screenshots/cast.png" width="340"/> | <img src="./screenshots/reviews.png" width="340"/> |
 
 ---
 
 ### 🖥️ Ultra-wide Display Example
 
-<p align="center">
-  <img src="./screenshots/ultra-wide.png" alt="Ultra-wide Display" width="800"/>
-</p>
+<img src="./screenshots/ultra-wide.png" width="1000"/>
