@@ -40,60 +40,30 @@ A responsive movie search app built with React and Vite. It uses The Movie Datab
 
 ## 🖼️ Screenshots
 
-### 🏠 Home Page
-
-<table>
-  <tr>
-    <td align="center"><strong>Mobile</strong></td>
-    <td align="center"><strong>Tablet</strong></td>
-    <td align="center"><strong>Desktop</strong></td>
-  </tr>
-  <tr>
-    <td><img src="./screenshots/mobile.png" width="200"/></td>
-    <td><img src="./screenshots/tablet.png" width="300"/></td>
-    <td><img src="./screenshots/desktop.png" width="500"/></td>
-  </tr>
-</table>
+| ![Mobile View](./screenshots/mobile.png)<br>**Mobile View** – compact layout for small screens. | ![Tablet View](./screenshots/tablet.png)<br>**Tablet View** – adaptive grid with intermediate sizing. |
+|:--:|:--:|
+| <img src="./screenshots/mobile.png" width="250"/> | <img src="./screenshots/tablet.png" width="300"/> |
 
 ---
 
-### 🔎 Search Results
-
-<p align="center">
-  <img src="./screenshots/search.png" width="700"/>
-</p>
+| ![Desktop View](./screenshots/desktop.png)<br>**Desktop View** – full-width layout with responsive columns. | ![Search Results](./screenshots/search-results.png)<br>**Search Results** – result grid after search query. |
+|:--:|:--:|
+| <img src="./screenshots/desktop.png" width="500"/> | <img src="./screenshots/search.png" width="500"/> |
 
 ---
 
-### ❌ Empty Input Validation
-
-<p align="center">
-  <img src="./screenshots/empty-input.png" width="500"/>
-</p>
+| ![Empty Query Validation](./screenshots/empty-query.png)<br>**Validation** – prevents submission of empty queries. | ![Movie Details](./screenshots/details.png)<br>**Movie Details** – selected movie info with navigation. |
+|:--:|:--:|
+| <img src="./screenshots/empty-input.png" width="450"/> | <img src="./screenshots/movie-details.png" width="450"/> |
 
 ---
 
-### 🎬 Movie Details Page
-
-<p align="center">
-  <img src="./screenshots/movie-details.png" width="700"/>
-</p>
+| ![Cast Section](./screenshots/cast.png)<br>**Cast** – horizontal scroll with actor info. | ![Reviews Section](./screenshots/reviews.png)<br>**Reviews** – user comments about the movie. |
+|:--:|:--:|
+| <img src="./screenshots/cast.png" width="400"/> | <img src="./screenshots/reviews.png" width="400"/> |
 
 ---
 
-### 👥 Cast Section & 💬 Reviews Section
-
-<table>
-  <tr>
-    <td><img src="./screenshots/cast.png" width="350"/></td>
-    <td><img src="./screenshots/reviews.png" width="350"/></td>
-  </tr>
-</table>
-
----
-
-### 🖥️ Ultra-wide Display Example
-
-<p align="center">
-  <img src="./screenshots/ultra-wide.png" width="900"/>
-</p>
+| ![Ultra-wide](./screenshots/ultrawide.png)<br>**Ultra-wide Display** – layout stretches up to TV screen resolution. |
+|:--:|
+| <img src="./screenshots/ultra-wide.png" width="800"/> |
