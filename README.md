@@ -58,4 +58,4 @@ A responsive movie search app built with React and Vite. It uses The Movie Datab
 
 | Ultra-wide Display Example |
 |:--:|
-| ![UltraWide](./screenshots/ultrawide.png) |
+| ![UltraWide](./screenshots/ultra-wide.png) |
