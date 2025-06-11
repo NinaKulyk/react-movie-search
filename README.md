@@ -38,24 +38,56 @@ A responsive movie search app built with React and Vite. It uses The Movie Datab
 
 ---
 
-## 📸 Screenshots
+## 📷 Screenshots
 
-| Home Page (Mobile) | Home Page (Tablet) |
-|:--:|:--:|
-| ![Mobile](./screenshots/mobile.png) | ![Tablet](./screenshots/tablet.png) |
+### 🏠 Home Page
 
-| Home Page (Desktop) | Search Results |
-|:--:|:--:|
-| ![Desktop](./screenshots/desktop.png) | ![Search](./screenshots/search.png) |
+<p align="center">
+  <img src="./screenshots/mobile.png" alt="Home Mobile" width="160"/>
+  <img src="./screenshots/tablet.png" alt="Home Tablet" width="230"/>
+</p>
 
-| Empty Input Validation | Movie Details Page |
-|:--:|:--:|
-| ![Validation](./screenshots/empty-input.png) | ![Details](./screenshots/movie-details.png) |
+<p align="center">
+  <img src="./screenshots/desktop.png" alt="Home Desktop" width="600"/>
+</p>
 
-| Cast Section | Reviews Section |
-|:--:|:--:|
-| ![Cast](./screenshots/cast.png) | ![Reviews](./screenshots/reviews.png) |
+---
 
-| Ultra-wide Display Example |
-|:--:|
-| ![UltraWide](./screenshots/ultra-wide.png) |
+### 🔍 Search Results
+
+<p align="center">
+  <img src="./screenshots/search.png" alt="Search Results" width="600"/>
+</p>
+
+---
+
+### ❌ Empty Input Validation
+
+<p align="center">
+  <img src="./screenshots/empty-input.png" alt="Empty Input Validation" width="500"/>
+</p>
+
+---
+
+### 🎬 Movie Details Page
+
+<p align="center">
+  <img src="./screenshots/movie-details.png" alt="Movie Details" width="600"/>
+</p>
+
+---
+
+### 👥 Cast Section & 💬 Reviews Section
+
+<p align="center">
+  <img src="./screenshots/cast.png" alt="Cast Section" width="300"/>
+  <img src="./screenshots/reviews.png" alt="Reviews Section" width="300"/>
+</p>
+
+---
+
+### 🖥️ Ultra-wide Display Example
+
+<p align="center">
+  <img src="./screenshots/ultra-wide.png" alt="Ultra-wide Display" width="800"/>
+</p>
